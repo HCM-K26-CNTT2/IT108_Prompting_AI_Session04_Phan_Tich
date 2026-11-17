@@ -1,0 +1,29 @@
+﻿[Phân tích] So sánh Trade-off các giải pháp ra lệnh cho Kỹ thuật Prompting Nâng cao (Logic & Chuỗi) 
+Bước 1: Đề xuất 2 prompt mẫu
+Viết rõ 2 prompt tương ứng với 2 phương án giải quyết.
+Giải pháp 1: Đơn giản, ngắn gọn
+"Hãy lập cho tôi thực đơn ăn uống 7 ngày để tăng cơ, tính toán cho tôi mức calo phù hợp, sau đó làm thực đơn theo từng ngày và phải giữ đúng chế độ dinh dưỡng từ đầu đến cuối."
+Giải pháp 2: Chi tiết, có nhiều ràng buộc
+Bạn hãy đóng vai trò là một người chuyên về dinh dưỡng cho người tập gym
+Bạn hãy lên cho tôi thực đơn 7 ngày cho nam (1m8, 90kg, tập gym mỗi ngày), đưa ra mức calo phù hợp nạp vào trong 7 ngày và hãy làm những gì tôi bảo dưới đây:
+Suy nghĩ từng bước : Tính toán mức calo và lượng đạm (protein) cần thiết mỗi ngày.
+Chỉ xuất ra thực đơn của 3 ngày đầu tiên trước để tránh quá dài. Sau khi tôi gõ chữ 'Tiếp tục', bạn mới viết tiếp 4 ngày còn lại.
+Tuyệt đối không đưa ra các món chiên và nhiều dầu mỡ. Khi viết tiếp 4 ngày sau thì phải nhắc lại mục tiêu calo ở đầu để không bị lệch quá so với 3 ngày đầu tiên.
+Bước 2: Lập bảng so sánh Trade-off
+Lập bảng so sánh tiêu chí.
+Tiêu chí
+	Giải pháp 1 (Đơn giản)
+	Giải pháp 2 (Chi tiết)
+	Độ dễ hiểu
+	Cao (viết nhanh, tự nhiên như nói chuyện)
+	Trung bình (dài, phải chia nhiều mục)
+	Tốn token
+	Ít
+	Nhiều hơn
+	Chặn lỗi biên
+	Trung bình (AI sẽ viết tới luôn 7 ngày rất sơ sài, dễ quên tính calo)
+	Cực tốt (AI tính toán rõ ràng, dừng lại đúng ngày và nhớ không được đưa các món chiện và dầu mỡ)
+	Bước 3: Lựa chọn và chạy thử
+Chọn phương án tối ưu nhất, giải thích lý do chọn và chạy thử lấy kết quả.
+Chọn phương án tốt ưu nhất: Giải pháp 2
+Lý do: Giải pháp 1 khiến AI dễ làm biếng chỉ viết qua loa cho xong 7. Giải pháp 2 thì có nhiều ràng buộc giúp AI tập trung làm tốt từng phần và tuân thủ theo quy tắc
